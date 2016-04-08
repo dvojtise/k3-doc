@@ -1,0 +1,64 @@
+:imagesdir: images
+
+= GEMOC Studio User Guide
+:doctype: book
+:toc:
+:numbered:
+
+ifdef::pdf[]
+:max-width: 450
+:half-width: 275
+:quarter-width: 137
+endif::[]
+ifndef::pdf[]
+:max-width: 1000
+:half-width: 500
+:quarter-width: 250
+endif::[]
+
+
+////////////////////////////////////////////////////////////////
+	use dedication to place image before the TOC
+////////////////////////////////////////////////////////////////
+
+== Chapter 
+
+foofoll 
+
+[plantuml, diagram-classes, png]     
+----
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+class Foo
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+DiagramBlock *- Foo
+----
+
+.Code block
+[source,xtend]
+----
+package mypackage
+
+import fr.inria.triskell.k3.Aspect
+
+import mypackage.OtherClass
+
+@Aspect(className=OtherClass)
+class OtherClassAspect {
+    def void display (){
+         prinln("I am OtherClassAspect")
+    }
+}
+
+public interface Hello {
+
+    void hello();
+
+}
+----
+
